@@ -48,12 +48,15 @@ function gradeQuiz(candidateAnswers) {
     console.log(`\nYour answer: ${candidateAnswers[i]} \nCorrect answer: ${correctAnswers[i]}\n`);
   }
   
-let gradePercent = (grade/5) * 100
+let gradePercent = (grade /questions.length) * 100
 
 if (gradePercent >= 80) {
-  console.log(`Congratulations! Your score is ${gradePercent}%. You passed the test! Welcome aboard, Astronaut ${candidateName}!`) 
+  console.log(`>>>Overall Grade: ${gradePercent}% (${grade} of 5 responses correct) <<<\n>>> Status: PASSED <<<`) 
+
+
+
 } else {
-console.log(`We regret to inform you that you have FAILED this test. Your score is ${gradePercent}%, but you need at least 80% to pass. Try again next year!`)
+console.log(`>>>Overall Grade: ${gradePercent}% (${grade} of 5 responses correct) <<<\n>>> Status: FAILED <<<`)
 };
 
   return grade;
